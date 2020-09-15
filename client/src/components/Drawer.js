@@ -85,10 +85,10 @@ function LeftDrawer(props) {
                     </div>
                     <div className={classes.follow}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Followers: 250
+                            Followers: {props.user.user.followers.length}
                         </Typography>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Following: 300
+                            Following: {props.user.user.following.length}
                         </Typography>
                     </div>
                     <div className={classes.list}>

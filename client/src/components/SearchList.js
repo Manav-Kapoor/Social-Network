@@ -71,7 +71,7 @@ function SearchList(props) {
   return (
     <List className={classes.root}>
       {props.data.length > 0 ? renderList() : 
-        <img src={errorImg} className={classes.img} />
+        <img src={errorImg} className="no-user" />
       }
     </List>
   );

@@ -40,13 +40,22 @@ class VisitProfile extends React.Component{
                         authorization: `Bearer ${this.props.user.token}`
                     }
                 });
-                if(this.props.user.user.following.filter(user => user.followingId === response.data._id)){
+                if(this.props.user.user.following.filter(user => user.followingId.toString() === response.data._id.toString()).length){
+                    console.log(this.props.user.user.following.filter(user => user.followingId.toString() === response.data._id.toString()));
                     this.setState({
                         ...this.state,
                         user: response.data,
                         isLoading: false,
                         posts: responsePosts.data,
                         isFollowed: true
+                    })
+                }else{
+                    this.setState({
+                        ...this.state,
+                        user: response.data,
+                        isLoading: false,
+                        posts: responsePosts.data,
+                        isFollowed: false
                     })
                 }
             }

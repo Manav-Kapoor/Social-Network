@@ -114,6 +114,9 @@ a{
     margin-top: 0.5rem;
     color: red;
 }
+.no-user{
+    width: 500px;
+}
 @media only screen and (max-width: 960px){
     .toolbar{
         padding: 0 2rem !important;
@@ -151,10 +154,16 @@ a{
     .search-div{
         flex-direction: column;
     }
+    .no-user{
+        width: 300px;
+    }
 }
 @media only screen and (max-width: 321px){
     .form{
         width: 90%;
         margin-left: 5%;
+    }
+    .no-user{
+        width: 200px;
     }
 }
